@@ -1,28 +1,28 @@
 # soft-computing
 
-##Write a Python program to implement all steps of GA (selection, crossover,
+#Write a Python program to implement all steps of GA (selection, crossover,
 
 import random
 
-# fitness function
+fitness function
 def fitness(x):
-    return x * x        # maximize x²
+    return x * x        maximize x²
 
-# initial population
+initial population
 pop = [random.uniform(-10, 10) for _ in range(5)]
 
 for gen in range(10):
     new_pop = []
 
     for _ in range(5):
-        # selection
+        selection
         p1 = random.choice(pop)
         p2 = random.choice(pop)
 
-        # crossover
+        crossover
         child = (p1 + p2) / 2
 
-        # mutation
+        mutation
         child += random.uniform(-1, 1)
 
         new_pop.append(child)
